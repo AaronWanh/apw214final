@@ -23,7 +23,7 @@ q1_table = tibble(
 )
 
 # bind_rows only makes more rows and not columns 
-old <- bind_rows(bq1)                              '''CHANGED new to old FOR MERGED CONFLICT'''
+old <- bind_rows(bq1)                              ''' CHANGED VARIABLE FOR MERGE CONFLICT. ORIGINALLY new'''
   # , bq2, bq3, prm)
 # view(new)
 
