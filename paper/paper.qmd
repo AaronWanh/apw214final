@@ -4,7 +4,7 @@ library(tidyverse)
 source("../R/moving-average.R")
 ```
 
-Data: Setting the raw data to the 
+Data: Setting up the raw data.
 ```{r}
 bq1 <- read_csv("../data/QuebradaCuenca1-Bisley.csv")
 bq2 <- read_csv("../data/QuebradaCuenca2-Bisley.csv")
@@ -12,7 +12,7 @@ bq3 <- read_csv("../data/QuebradaCuenca3-Bisley.csv")
 prm <- read_csv("../data/RioMameyesPuenteRoto.csv")
 ```
 
-Methods: Indexing the data to match the desired 
+Methods: Calculates the rolling average of 9 weeks. 
 ```{r}
 new_bq1 <- moving_average(bq1)
 new_bq2 <- moving_average(bq2)

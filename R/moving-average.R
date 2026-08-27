@@ -1,20 +1,19 @@
 # The input to this function should be a data frame containing stream chemistry data
-library(tidyverse)
 moving_average <- function(ds) {
   # Initialize a tibble to contain the results
-  ds_filtered <- ds |> 
-  select("Sample_ID", "Sample_Date", "K", "Mg", "Ca", "NH4-N", "NO3-N") |> 
-# 1988 to 1995
-  filter(Sample_Date >= ymd("1989-01-01") & Sample_Date < ymd("1995-01-01"))
+  ds_filtered <- ds |>
+    select(Sample_ID, Sample_Date, K, Mg, Ca, `NH4-N`, `NO3-N`) |>
+    # 1988 to 1995
+    filter(Sample_Date >= ymd("1988-01-01") & Sample_Date < ymd("1995-01-01"))
 
-  result = tibble(
-  site = ds_filtered$Sample_ID,
-  year = ds_filtered$Sample_Date,
-  k_con = NA,
-  nitrate_con = NA, 
-  mg_con = NA,
-  ca_con = NA,
-  amm_con = NA
+  result <- tibble(
+    site = ds_filtered$Sample_ID,
+    year = ds_filtered$Sample_Date,
+    k_con = NA,
+    nitrate_con = NA,
+    mg_con = NA,
+    ca_con = NA,
+    amm_con = NA
   )
 
   # result <- tibble(
@@ -36,7 +35,7 @@ moving_average <- function(ds) {
 
     # Use indexing to pull out the ion concentrations that fall inside the window
     k_values <- ds_filtered$K[in_window]
-     # print("")
+    # print("")
     mg_values <- ds_filtered$Mg[in_window]
     ca_values <- ds_filtered$Ca[in_window]
     nh4_values <- ds_filtered$`NH4-N`[in_window]
@@ -56,7 +55,7 @@ moving_average <- function(ds) {
     result$amm_con[x] <- nh4_mean
     result$nitrate_con[x] <- no3_mean
   }
-  
+
   # Return the result
   return(result)
 }
