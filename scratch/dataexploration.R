@@ -13,10 +13,6 @@ prm <- read_csv("data/RioMameyesPuenteRoto.csv")
 
 # seq(ymd("1989-01-01"), ymd("1995-01-01"), by = "9 weeks")
 
-# bind_rows only makes more rows and not columns
-#new <- bind_rows(bq1)                              ''' CHANGED VARIABLE FOR MERGE CONFLICT. ORIGINALLY new'''
-# , bq2, bq3, prm)
-# view(new)
 new_bq1 <- moving_average(bq1)
 new_bq2 <- moving_average(bq2)
 new_bq3 <- moving_average(bq3)
