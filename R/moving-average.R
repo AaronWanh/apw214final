@@ -1,11 +1,12 @@
 # The input to this function should be a data frame containing stream chemistry data
 moving_average <- function(ds) {
-  # Initialize a tibble to contain the results
+  # filtering out only the columns we want to use and filtering the concentrations that are within
+  # the year
   ds_filtered <- ds |>
     select(Sample_ID, Sample_Date, K, Mg, Ca, `NH4-N`, `NO3-N`) |>
     # 1988 to 1995
     filter(Sample_Date >= ymd("1988-01-01") & Sample_Date < ymd("1995-01-01"))
-
+  # Initialize a tibble to contain the results
   result <- tibble(
     site = ds_filtered$Sample_ID,
     year = ds_filtered$Sample_Date,
@@ -15,13 +16,6 @@ moving_average <- function(ds) {
     ca_con = NA,
     amm_con = NA
   )
-
-  # result <- tibble(
-  #   window_start = seq(____, ____, by = _____),
-  #   k_mgl = NA,
-  #   mg_mgl = NA,
-  #   # Fill in the rest of the ions
-  # )
 
   # Fill in the iterator and sequence
   for (x in 1:nrow(ds_filtered)) {

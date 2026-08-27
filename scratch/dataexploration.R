@@ -30,37 +30,30 @@ new_table <- ion_site_table |>
     names_to = "ions",
     values_to = "avg_ion_conc"
   )
-# #   pivot_wider(
-# #     names_from = site,
-# #     values_from = site,
-# #   )
 
-# Potassium Graph
+# Graph
 ggplot(
   data = new_table,
   mapping = aes(
     x = year,
     y = avg_ion_conc,
-    color = site
+    linetype = site
   )
 ) +
-  geom_point() +
   geom_line() +
+  scale_linetype_manual(
+    values = c(
+      "Q1" = "dotted",
+      "Q2" = "longdash",
+      "Q3" = "dotdash",
+      "MPR" = "solid"
+    )
+  ) +
   scale_x_date(
-    limits = as.Date(c("1989-01-01", "1995-01-01")),
+    limits = as.Date(c("1988-01-01", "1995-01-01")),
     date_breaks = "1 year",
     date_labels = "%Y"
   ) +
-  facet_wrap(~ions, ncol = 1, scales = "free")
-
-# # Phosphate Graph
-# ggplot(
-#   data = ion_site_table,
-#   mapping = aes(
-#     x = year,
-#     y = nitrate_con,
-#     color = site
-#   )
-# ) +
-#   geom_point() +
-#   geom_line()
+  facet_wrap(~ions, ncol = 1, scales = "free") +
+  theme_bw() +
+  geom_vline(xintercept = ymd("1989-09-01"), linetype = "dashed")

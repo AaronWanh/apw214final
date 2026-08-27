@@ -36,15 +36,24 @@ ggplot(
   mapping = aes(
     x = year,
     y = avg_ion_conc,
-    color = site
+    linetype = site
   )
 ) +
-  geom_point() +
   geom_line() +
+  scale_linetype_manual(
+    values = c(
+      "Q1" = "dotted",
+      "Q2" = "longdash",
+      "Q3" = "dotdash",
+      "MPR" = "solid"
+    )
+  ) +
   scale_x_date(
-    limits = as.Date(c("1989-01-01", "1995-01-01")),
+    limits = as.Date(c("1988-01-01", "1995-01-01")),
     date_breaks = "1 year",
     date_labels = "%Y"
   ) +
-  facet_wrap(~ions, ncol = 1, scales = "free")
+  facet_wrap(~ions, ncol = 1, scales = "free") +
+  theme_bw() +
+  geom_vline(xintercept = ymd("1989-09-01"), linetype = "dashed")
 ```
