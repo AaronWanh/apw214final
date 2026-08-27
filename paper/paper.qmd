@@ -1,0 +1,50 @@
+Background: 
+```{r}
+library(tidyverse)
+source("../R/moving-average.R")
+```
+
+Data: Setting the raw data to the 
+```{r}
+bq1 <- read_csv("../data/QuebradaCuenca1-Bisley.csv")
+bq2 <- read_csv("../data/QuebradaCuenca2-Bisley.csv")
+bq3 <- read_csv("../data/QuebradaCuenca3-Bisley.csv")
+prm <- read_csv("../data/RioMameyesPuenteRoto.csv")
+```
+
+Methods: Indexing the data to match the desired 
+```{r}
+new_bq1 <- moving_average(bq1)
+new_bq2 <- moving_average(bq2)
+new_bq3 <- moving_average(bq3)
+new_prm <- moving_average(prm)
+
+ion_site_table <- bind_rows(new_bq1, new_bq2, new_bq3, new_prm)
+
+new_table <- ion_site_table |>
+  pivot_longer(
+    col = k_con:amm_con,
+    names_to = "ions",
+    values_to = "avg_ion_conc"
+  )
+```
+
+Results: This is where the graphs are produced
+```{r}
+ggplot(
+  data = new_table,
+  mapping = aes(
+    x = year,
+    y = avg_ion_conc,
+    color = site
+  )
+) +
+  geom_point() +
+  geom_line() +
+  scale_x_date(
+    limits = as.Date(c("1989-01-01", "1995-01-01")),
+    date_breaks = "1 year",
+    date_labels = "%Y"
+  ) +
+  facet_wrap(~ions, ncol = 1, scales = "free")
+```
