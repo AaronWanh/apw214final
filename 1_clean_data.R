@@ -15,7 +15,7 @@ new_mpr <- moving_average(mpr)
 ion_site_table <- bind_rows(new_bq1, new_bq2, new_bq3, new_mpr)
 new_table <- ion_site_table |>
   pivot_longer(
-    col = k_con:amm_con,
+    col = k_mg_l:amm_ug_l,
     names_to = "ions",
     values_to = "avg_ion_conc"
   )

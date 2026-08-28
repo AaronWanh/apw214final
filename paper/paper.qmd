@@ -1,36 +1,19 @@
 Background: 
 ```{r}
-library(tidyverse)
-source("../R/moving-average.R")
+
 ```
 
 Data: Setting up the raw data.
-```{r}
-bq1 <- read_csv("../data/QuebradaCuenca1-Bisley.csv")
-bq2 <- read_csv("../data/QuebradaCuenca2-Bisley.csv")
-bq3 <- read_csv("../data/QuebradaCuenca3-Bisley.csv")
-prm <- read_csv("../data/RioMameyesPuenteRoto.csv")
-```
+
 
 Methods: Calculates the rolling average of 9 weeks. 
 ```{r}
-new_bq1 <- moving_average(bq1)
-new_bq2 <- moving_average(bq2)
-new_bq3 <- moving_average(bq3)
-new_prm <- moving_average(prm)
+library(tidyverse)
+source("R/moving-average.R")
+source("1_clean_data.R")
 
-ion_site_table <- bind_rows(new_bq1, new_bq2, new_bq3, new_prm)
+new_table <- read_csv("output/cleaned_ion_site.csv")
 
-new_table <- ion_site_table |>
-  pivot_longer(
-    col = k_con:amm_con,
-    names_to = "ions",
-    values_to = "avg_ion_conc"
-  )
-```
-
-Results: This is where the graphs are produced
-```{r}
 ggplot(
   data = new_table,
   mapping = aes(
@@ -55,5 +38,12 @@ ggplot(
   ) +
   facet_wrap(~ions, ncol = 1, scales = "free") +
   theme_bw() +
-  geom_vline(xintercept = ymd("1989-09-01"), linetype = "dashed")
+  geom_vline(xintercept = ymd("1989-09-01"), linetype = "dashed") +
+  # Switches the ions labels to the y axis
+  facet_grid(vars(ions), scales = "free_y", switch = "y") +
+  # removes the years in between the graphs and duplicates it onto the top and bottom
+  scale_x_date(name = "Year", sec.axis = dup_axis())
 ```
+
+Results: This is where the graphs are produced
+
