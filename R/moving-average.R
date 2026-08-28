@@ -10,11 +10,11 @@ moving_average <- function(ds) {
   result <- tibble(
     site = ds_filtered$Sample_ID,
     year = ds_filtered$Sample_Date,
-    k_con = NA,
-    nitrate_con = NA,
-    mg_con = NA,
-    ca_con = NA,
-    amm_con = NA
+    k_mg_l = NA,
+    nitrate_ug_l = NA,
+    mg_mg_l = NA,
+    ca_mg_l = NA,
+    amm_ug_l = NA
   )
 
   # Fill in the iterator and sequence
@@ -43,11 +43,11 @@ moving_average <- function(ds) {
     nh4_mean <- mean(nh4_values, na.rm = TRUE)
     no3_mean <- mean(no3_values, na.rm = TRUE)
 
-    result$k_con[x] <- k_mean
-    result$mg_con[x] <- mg_mean
-    result$ca_con[x] <- ca_mean
-    result$amm_con[x] <- nh4_mean
-    result$nitrate_con[x] <- no3_mean
+    result$k_mg_l[x] <- k_mean
+    result$mg_mg_l[x] <- mg_mean
+    result$ca_mg_l[x] <- ca_mean
+    result$amm_ug_l[x] <- nh4_mean
+    result$nitrate_ug_l[x] <- no3_mean
   }
 
   # Return the result

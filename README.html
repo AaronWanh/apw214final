@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="README_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="README_files/libs/bootstrap/bootstrap-917079515d91bccb85b543faf8aa8bb6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="README_files/libs/bootstrap/bootstrap-215b371544c282197b31c8aa00ce3677.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -53,7 +53,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>��# Chemical Concentration of Bisley, Puerto Rico before and after Hurricane Hugo   Repository Purpose:      This repository will analyze the water quality in different regions of Puerto Rico before and after Hurricane Hugo in 1986.   What is in this Repository:     This repository contains the raw data acquired from field experts on the chemical composition of the water quality in Puerto Rico. It also contains code necessary for the analysis and figures. In a separate folder, the outputs and figures will be stored there where people can view.  Details regarding data access</p>
+<p>��# Chemical Concentration of Bisley, Puerto Rico before and after Hurricane Hugo   ### Repository Purpose  - This repository will analyze the water quality in different regions of Puerto Rico before and after Hurricane Hugo in 1986. The goal is to recreate the figure below: [insert figure] ![alt text](image.png)  ### What is in this Repository - This repository contains the raw data acquired from field experts on the chemical composition of the water quality in Puerto Rico. The <em>scratch</em> folder contains spaghetti code mainly utilized for testing and data wrangling. The main code is within paper.qmd where you run the code to create the graph. It sources from <em>1<em>clean</em>data.R</em> which reads the raw data and filters out the unnecessary parts while creating a new dataset called <em>cleaned<em>ion</em>site</em> in the output folder. The paper.qmd also sources from <em>moving-average.R</em> which calculates the 9 week moving averages of each of the target chemical ion while indexing them into a separate dataset.  ### Accessing the data - Initialized <em>Tidyverse</em> library to enable built-in functions that will allow our code to run. - The raw data was obtained from the EDI Data Portal. The data package was created by William H. McDowell, the International Institute of Tropical Forestry, and the USDA Forest Service. We saved the raw data [QuebradaCuenca1-Bisley], [QuebradaCuenca2-Bisley], [QuebradaCuenca3-Bisley], and [RioMameyesPuenteRoto] in the <em>data</em> folder. https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.20.4923064  - The raw data is stored and initialized in <em>1<em>clean</em>data.R</em> while being filtered to extract the data we want. </p>
 
 </main>
 <!-- /main column -->
