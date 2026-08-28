@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Aaron Wang">
+<meta name="dcterms.date" content="2026-08-28">
 
-<title>paper</title>
+<title>Water Chemical Composition of Bisley, Puerto Rico before and after Hurricane Hugo from 1988 to 1995</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,41 +28,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -74,153 +41,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="paper_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="paper_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="paper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="paper_files/libs/bootstrap/bootstrap-917079515d91bccb85b543faf8aa8bb6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="paper_files/libs/bootstrap/bootstrap-215b371544c282197b31c8aa00ce3677.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background:</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data:</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods:</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results:</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Water Chemical Composition of Bisley, Puerto Rico before and after Hurricane Hugo from 1988 to 1995</h1>
+</div>
 
 
 
-<p>Background:</p>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Aaron Wang </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 28, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background:</h3>
+<p>Although stream water chemistry is highly susceptible to disturbances, the effects of hurricanes on watersheds have not been thoroughly studied. Because of this, researcher Douglas A. Schaefer along with his team conducted a study on the chemistry composition of the water in Luquillo Mountains within Puerto Rico. In this study, they collected data 2 years before the hurricane and 11 years post hurricane to observe the before and after effects. And after conducting analysis on the data they received, they produced figure 1 below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Concentrations in Bisley, Puerto Rico streams before and after Hurricane Hugo, 9-wk moving averags. (a) potassium, (b) nitrate-N, (c) magnesium, (d) calcium and (e) ammonium-N. The vertical lines mark the time of hurricane disturbance. Schaefer et al.&nbsp;(2000)</figcaption>
+</figure>
+</div>
+<p>The graph was created to observe which ions were affected the most. With this information researcher can determine what are the consequences that arises from the dramatic responses of the concentration fluxes. The goal of this paper is to attempt to recreate this graph to in order test whether the data provided by the researchers allows reproducibility.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data:</h3>
+<p>The raw data files used in this originated from the website https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.20.4923064. Once we downloaded it, we then organized thme into a folder called <em>data</em>. The specific datasets that were downloaded were <strong>QuebradaCuenca1-Bisley</strong>, <strong>QuebradaCuenca2-Bisley</strong>, <strong>QuebradaCuenca3-Bisley</strong>, and <strong>RioMameyesPuenteRoto</strong> csv files. The values we were specifically interested in were Sample_ID, Sample_Date, Potassium (K), Magnesium (Mg), Calcium (Ca), Ammomium (NH4-N), and Nitrate (NO3-N) concentrations. The sample dates would allow us to calculate the 9 week rolling mean averages for each date while the sample ID indicate which site the data was recorded in.</p>
+</section>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods:</h3>
+<p>In order to read the data file and extract only the values necessary to recreate the graph, in <em>1_clean_data.R</em> file we use the function read_csv for each of the data files. In the same file, it sources from the <em>moving-average.R</em> file to filter the csv files and calculate the mean of the ions in rolling 9 week averages within a loop indexing through each of the sample date provided the raw data set. The <em>moving-average.R</em> then takes the new mean values and puts them into the new dataset. Then back in the <em>1_clean_data.R</em> file, we change the structure of the dataset by pivoting longer and finally we create a new dataset with all the means of each site inside <em>cleaned_ion_site.csv</em> in the output folder.</p>
+<p>Once we have our dataset set to a variable, we can plot with the function ggplot(). In order to create a graph that is similar to the original, the linetype needs to be changed to the respective linetype shown in the original graph. In order to display all five graphs in a single column, we can use the facet_wrap() function to graph each of the ions with respect to time in a single column.</p>
+</section>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results:</h3>
+<p>The graph visualizes the trend of ion concentrations from 1988 to 1995. The vertical line that cuts through the graphs indicates the date when the hurricane struck. Before the hurricane the chemical composition for each site stayed relatively stable following a similar, steady trend. However after the hurricane struck the ion distribution became more chaotic. Nitrate in each site gradually decreased with sudden spikes of high concentration that quickly dropped in concentration. Magnsium and potassium conctrations in the MPR became the lowest out of all the other sites after the hurricane while having the highest average calcium concentration. The ammomium graph cutoff before the hurricane date due to missing data in the csv files.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.2.1     ✔ readr     2.2.0
-✔ forcats   1.0.1     ✔ stringr   1.6.0
-✔ ggplot2   4.0.3     ✔ tibble    3.3.1
-✔ lubridate 1.9.5     ✔ tidyr     1.3.2
-✔ purrr     1.2.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../R/moving-average.R"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Data: Setting up the raw data.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bq1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/QuebradaCuenca1-Bisley.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
-e.g.:
-  dat &lt;- vroom(...)
-  problems(dat)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1847 Columns: 39
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (8): Sample_ID, NitrateCode, SulfateCode, NH4Code, PO4Code, DOCCode, T...
-dbl  (21): Code, Sample_Time, Gage_Ht, Temp, pH, Cond, Cl, NO3-N, SO4-S, Na,...
-lgl   (9): TDP, ChlorideCode, SodiumCode, PotassiumCode, MagnesiumCode, Calc...
-date  (1): Sample_Date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bq2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/QuebradaCuenca2-Bisley.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1838 Columns: 39
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (9): Sample_ID, NitrateCode, SulfateCode, PotassiumCode, NH4Code, PO4C...
-dbl  (21): Code, Sample_Time, Gage_Ht, Temp, pH, Cond, Cl, NO3-N, SO4-S, Na,...
-lgl   (8): TDP, ChlorideCode, SodiumCode, MagnesiumCode, CalciumCode, DICCod...
-date  (1): Sample_Date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bq3 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/QuebradaCuenca3-Bisley.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1835 Columns: 39
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (9): Sample_ID, NitrateCode, SulfateCode, NH4Code, PO4Code, DOCCode, T...
-dbl  (21): Code, Sample_Time, Gage_Ht, Temp, pH, Cond, Cl, NO3-N, SO4-S, Na,...
-lgl   (8): TDP, ChlorideCode, SodiumCode, PotassiumCode, MagnesiumCode, Calc...
-date  (1): Sample_Date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>prm <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/RioMameyesPuenteRoto.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1657 Columns: 39
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (8): Sample_ID, NitrateCode, SulfateCode, NH4Code, PO4Code, TDNCode, S...
-dbl  (21): Code, Sample_Time, Gage_Ht, Temp, pH, Cond, Cl, NO3-N, SO4-S, Na,...
-lgl   (9): TDP, ChlorideCode, SodiumCode, PotassiumCode, MagnesiumCode, Calc...
-date  (1): Sample_Date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-<p>Methods: Calculates the rolling average of 9 weeks.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>new_bq1 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(bq1)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>new_bq2 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(bq2)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>new_bq3 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(bq3)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>new_prm <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(prm)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>ion_site_table <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(new_bq1, new_bq2, new_bq3, new_prm)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>new_table <span class="ot">&lt;-</span> ion_site_table <span class="sc">|&gt;</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> k_con<span class="sc">:</span>amm_con,</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"ions"</span>,</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"avg_ion_conc"</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Results: This is where the graphs are produced</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> new_table,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> year,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> avg_ion_conc,</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">linetype =</span> site</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Q1"</span> <span class="ot">=</span> <span class="st">"dotted"</span>,</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Q2"</span> <span class="ot">=</span> <span class="st">"longdash"</span>,</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Q3"</span> <span class="ot">=</span> <span class="st">"dotdash"</span>,</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"MPR"</span> <span class="ot">=</span> <span class="st">"solid"</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">limits =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"1988-01-01"</span>, <span class="st">"1995-01-01"</span>)),</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">date_breaks =</span> <span class="st">"1 year"</span>,</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">date_labels =</span> <span class="st">"%Y"</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>ions, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">ymd</span>(<span class="st">"1989-09-01"</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 1380 rows containing missing values or values outside the scale range
-(`geom_line()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="paper_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="paper_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
+<p>By comparing both of the graphs, we can see that there is a clear discrepancy. While some of the trends match, there are various instances were the graphs are missing data. For example most of the data in the original graph did not contain data after 1992 while all the graphs except for ammonium contained data after 1992. Our ammomium values were missing after 1988 however the original showed consistent data from 1989 to 1993.</p>
+</section>
 
 </main>
 <!-- /main column -->
