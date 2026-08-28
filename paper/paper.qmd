@@ -30,7 +30,6 @@ The graph visualizes the trend of ion concentrations from 1988 to 1995. The vert
 
 ```{r, message = FALSE, include = FALSE}
 library(tidyverse)
-# Calculates the 9 week rolling averages and adds into a new dataset
 
 # Reading the new filtered dataset.
 new_table <- read_csv("../output/cleaned_ion_site.csv")
@@ -46,6 +45,7 @@ ggplot(
     linetype = site
   )
 ) +
+  # changes the linetypes of each site
   geom_line() +
   scale_linetype_manual(
     values = c(
@@ -55,13 +55,16 @@ ggplot(
       "MPR" = "solid"
     )
   ) +
+  # sets the scale of the graph
   scale_x_date(
     limits = as.Date(c("1988-01-01", "1995-01-01")),
     date_breaks = "1 year",
     date_labels = "%Y"
   ) +
+  # organizes the graphs into one single column
   facet_wrap(~ions, ncol = 1, scales = "free") +
   theme_bw() +
+  # adds a vertical line to indicate the hurricane date
   geom_vline(xintercept = ymd("1989-09-01"), linetype = "dashed") +
   # Switches the ions labels to the y axis
   facet_grid(vars(ions), scales = "free_y", switch = "y") +
